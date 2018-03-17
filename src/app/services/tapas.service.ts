@@ -20,7 +20,7 @@ export class TapasService {
 
   getTapas(): Observable<Array<Tapa>> {
     return of(TAPAS_DATA).pipe(
-      tap(v => console.log(v))
+      // tap(v => console.log(v))
     );
   }
 
@@ -33,7 +33,14 @@ export class TapasService {
   // }
 
   saveTapas(tapa: Tapa): Observable<Tapa> {
+    tapa.id = TAPAS_DATA.length;
     TAPAS_DATA.push(tapa);
+    console.log(tapa);
     return of(tapa);
   }
+
+  updateTapa(tapa: Tapa): Observable<Tapa> {
+    return of(TAPAS_DATA[tapa.id] = tapa);
+  }
+
 }

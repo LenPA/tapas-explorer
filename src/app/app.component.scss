@@ -8,38 +8,51 @@
     color: #fff;
   }
 
-}
-
-mat-card-content {
-  dl {
-    margin-top: 2em;
-    border-bottom: 1px solid rgba(221, 221, 221, 0.15);
-    padding-top: 1em;
-    padding-bottom: 1.5em;
-  }
-
-  dt, dd {
-    display: inline-block;
-    margin-top: 0.5em;
-
-    &:first-child {
-      margin-top: 0;
+  /deep/
+    tap-tapas-list {
+      mat-grid-tile{
+        height: 200px;
+      }
+      mat-card {
+        width: 200px;
+        margin: 0 auto;
+        margin-top: 2em;
+        text-align: center;
+      img {
+        // border-radius: 50%;
+      }
     }
   }
 
-  dt {
-    width: 25%;
-    font-weight: bold;
+  /deep/
+  tap-tapas-detail {
+    mat-card {
+      max-width: 500px;
+      margin: 0 auto;
+      margin-top: 2em;
+    img {
+      border-radius: 50%;
+    }
   }
+}
 
-  dd {
-    margin-left: 0;
-    width: 70%;
-  }
+  /deep/ mat-card {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 2em;
+    img {
+      // border-radius: 50%;
+    }
 
-  dt:first-child + dd {
-    margin-top: 0;
   }
+}
+
+
+
+
+:host {
+  display: block;
+
 }
 
 /deep/ mat-list {
@@ -61,16 +74,18 @@ mat-card-content {
   }
 }
 
-// /deep/ .tap-tapas-detail,
-// /deep/ .tap-tapas-creator,
-/deep/ .tap-tapas-detail {
+/deep/ .trm-contacts-detail,
+/deep/ .trm-contacts-creator,
+/deep/ .trm-contacts-editor,
+/deep/ .trm-about,
+/deep/ .tap-tapas-creator {
   mat-card {
     max-width: 500px;
     margin: 0 auto;
     margin-top: 2em;
 
     img {
-      border-radius: 50%;
+      // border-radius: 50%;
     }
   }
 
@@ -87,7 +102,37 @@ mat-card-content {
     }
   }
 
+  mat-card-content {
+    dl {
+      margin-top: 2em;
+      border-bottom: 1px solid rgba(221, 221, 221, 0.15);
+      padding-top: 1em;
+      padding-bottom: 1.5em;
+    }
 
+    dt, dd {
+      display: inline-block;
+      margin-top: 0.5em;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    dt {
+      width: 25%;
+      font-weight: bold;
+    }
+
+    dd {
+      margin-left: 0;
+      width: 70%;
+    }
+
+    dt:first-child + dd {
+      margin-top: 0;
+    }
+  }
 
   fieldset {
     legend { color: #ccc; }
@@ -123,7 +168,7 @@ mat-card-content {
     color: #666;
   }
 
-  .gender-label {
+  .category-label {
     color: #ccc;
   }
   .mat-radio-outer-circle {
@@ -135,12 +180,7 @@ mat-card-content {
   }
 }
 
-/deep/ .tap-about mat-card img {
-  border-radius: 0;
-  max-height: 400px;
-}
-
-/deep/ .tap-search-container {
+/deep/ .trm-search-container {
   width: 100%;
 }
 
@@ -172,7 +212,6 @@ mat-card-content {
   }
 }
 
-/deep/ tap-tab > mat-input-container:first-child {
+/deep/ trm-tab > mat-input-container:first-child {
   padding-top: 25px;
 }
-
